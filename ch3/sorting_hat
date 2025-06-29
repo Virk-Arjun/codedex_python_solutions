@@ -1,0 +1,47 @@
+g = 0 
+s = 0 
+h = 0 
+r = 0 
+
+q_1 = int(input("Do you like Dawn of Dusk? Choose 1 for Dawn and 2 for Dusk")) 
+if q_1 == 1: 
+  g += 1 
+  r += 1 
+elif q_2: 
+  h += 1 
+  s += 1 
+else: 
+  print ("Wrong Input") 
+
+q_2 = int(input("When I'm dead, I want people to remember me as: 1 The Good, 2 The Great 3 The wise 4 The Bold"))
+if q_2 == 1: 
+  h += 2
+elif q_2 == 2: 
+  s += 2 
+elif q_2 == 3: 
+  r += 2 
+elif q_2 == 4: 
+  g += 2 
+else: 
+  print ("Wrong Input")
+
+q_3 = int(input("Which kind of instrument most pleases your ear? 1 Violin 2 Trumpet 3 Piano 4 Drums"))
+if q_3 == 1: 
+  s += 4 
+elif q_3 == 2: 
+  h += 4 
+elif q_3 == 3: 
+  r += 4
+elif q_3 == 4: 
+  g +=4 
+else: 
+  print ("This is not an input that can be taken in") 
+
+print ("G: " + str(g))
+print ("H: " + str(h))
+print ("R: " + str(r))
+print ("S: " + str(s))
+
+scores = {"G": g, "H": h, "R": r, "S": s}
+winner = max(scores, key=scores.get)   # house with highest total
+print(f"\nHighest score → {winner} with {scores[winner]} points!")
